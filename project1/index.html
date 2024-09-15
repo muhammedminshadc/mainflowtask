@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" style="display:none;">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+    </div>
+
+    <!-- Event Management Content -->
+    <div id="mainContent" style="display:none;">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Events</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showEvents('event1')">Event 1</a>
+                        <a href="#" onclick="showEvents('event2')">Event 2</a>
+                        <a href="#" onclick="showEvents('event3')">Event 3</a>
+                    </div>
+                </li>
+                <li><a href="#" id="contacts">Contact</a></li>
+                <li><a href="#" id="logout" style="display:none;">Logout</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Welcome to Elite Events </h1>
+            <p>We organize the best events for you!</p>
+        </header>
+
+        <section id="events">
+            <div class="event" id="event1" style="display:none;">
+                <h3>Event 1</h3>
+                <p>Date: 20th September 2024</p>
+                <p>Location: Bengaluru</p>
+                <p>Description: Join us for an exciting event in Bengaluru with guest speakers, workshops, and networking opportunities.</p>
+            </div>
+            <div class="event" id="event2" style="display:none;">
+                <h3>Event 2</h3>
+                <p>Date: 25th September 2024</p>
+                <p>Location: Mumbai</p>
+                <p>Description: A grand event in Mumbai featuring live music, food stalls, and interactive sessions with industry experts.</p>
+            </div>
+            <div class="event" id="event3" style="display:none;">
+                <h3>Event 3</h3>
+                <p>Date: 30th September 2024</p>
+                <p>Location: Chennai</p>
+                <p>Description: Experience the vibrant culture of Chennai with our event that includes traditional performances, tech showcases, and more.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Elite Events. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
